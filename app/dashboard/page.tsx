@@ -161,7 +161,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white p-8">
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-3xl font-bold mb-8">Your Bookmarks</h1>
+        <h1 className="text-4xl text-center font-bold mb-8">Your Bookmarks</h1>
 
         {/* Add Form */}
         <form
@@ -184,7 +184,7 @@ export default function Dashboard() {
           />
           <button
             type="submit"
-            className="bg-blue-600 px-6 py-2 rounded-xl hover:bg-blue-500 transition-all hover:scale-105 active:scale-95"
+            className="bg-gray-600 px-6 py-2 rounded-xl hover:bg-gray-500 transition-all hover:scale-105 active:scale-95"
           >
             Add
           </button>
