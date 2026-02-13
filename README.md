@@ -1,11 +1,13 @@
 # 🔖 Realtime Bookmark Manager
 
 A production-ready fullstack bookmark management application built with **Next.js + Supabase**, featuring secure authentication, realtime synchronization, inline editing, instant search filtering, and polished UX.
+A production-ready fullstack bookmark management application built with **Next.js + Supabase**, featuring secure authentication, realtime synchronization, inline editing, instant search filtering, and polished UX.
 
 ---
 
 ## 🚀 Live Demo
 
+🔗 https://smart-bookmark-inky.vercel.app/
 🔗 https://smart-bookmark-inky.vercel.app/
 
 ## 📂 Repository
@@ -27,7 +29,9 @@ A production-ready fullstack bookmark management application built with **Next.j
 # 📌 Project Overview
 
 This application allows authenticated users to securely manage personal bookmarks in a realtime environment.
+This application allows authenticated users to securely manage personal bookmarks in a realtime environment.
 
+### ✨ Users Can:
 ### ✨ Users Can:
 
 - ➕ Add bookmarks  
@@ -43,11 +47,20 @@ This application allows authenticated users to securely manage personal bookmark
 # 🎯 Project Focus
 
 This project was built with strong emphasis on:
+- 📱 Use the app seamlessly on mobile  
+- ✨ Experience smooth animations and polished interactions  
+
+---
+
+# 🎯 Project Focus
+
+This project was built with strong emphasis on:
 
 - ✅ Correctness  
 - 🔒 Security  
 - ⚡ Performance  
 - 🎨 User Experience  
+- 🏗 Production-level architecture  
 - 🏗 Production-level architecture  
 
 ---
@@ -70,6 +83,7 @@ This project was built with strong emphasis on:
 - PostgreSQL
 - Authentication
 - Realtime Subscriptions
+- Realtime Subscriptions
 - Row Level Security (RLS)
 
 ---
@@ -83,11 +97,18 @@ Instead of refetching the entire bookmarks table on every realtime event, the ap
 - `INSERT` → Prepend to state  
 - `DELETE` → Remove from state  
 - `UPDATE` → Merge updated record  
+- `INSERT` → Prepend to state  
+- `DELETE` → Remove from state  
+- `UPDATE` → Merge updated record  
 
+### Why This Matters
 ### Why This Matters
 
 - Reduced database reads  
 - Better scalability  
+- Faster UI updates  
+- More efficient state handling  
+- Production-grade realtime architecture  
 - Faster UI updates  
 - More efficient state handling  
 - Production-grade realtime architecture  
@@ -97,7 +118,9 @@ Instead of refetching the entire bookmarks table on every realtime event, the ap
 ## 2️⃣ Secure Row Level Security (RLS)
 
 RLS is enabled on the `bookmarks` table to guarantee strict user data isolation.
+RLS is enabled on the `bookmarks` table to guarantee strict user data isolation.
 
+### Implemented Policies:
 ### Implemented Policies:
 
 - **SELECT** → `auth.uid() = user_id`
@@ -105,6 +128,7 @@ RLS is enabled on the `bookmarks` table to guarantee strict user data isolation.
 - **UPDATE** → `auth.uid() = user_id`
 - **DELETE** → `auth.uid() = user_id`
 
+This ensures users can only access and modify their own data.
 This ensures users can only access and modify their own data.
 
 ---
